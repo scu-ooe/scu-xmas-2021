@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "sync": "browser-sync start --server --files \"**/*\"",
+    "dev": "postcss assets/style.tailwind.css --output assets/style.css",
+    "watch:dev": "npm run dev -w",
+    "prod": "NODE_ENV=production npm run dev",
+    "watch": "run-p watch:dev sync",
+    "pretest": "eslint --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "eslint-config-gsap": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "eslint": "^7.13.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "tailwindcss-textshadow": "^2.1.3"
+  }
+}
